@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_meedu/flutter_meedu.dart';
-import 'package:flutter_meedu/router.dart' as router;
+import 'package:flutter_meedu/ui.dart';
 import 'package:profile_test_app/app/ui/global_controllers/session_controller.dart';
 import 'controller/home_provider.dart';
 import 'package:profile_test_app/app/ui/routes/routes.dart';

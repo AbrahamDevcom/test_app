@@ -12,10 +12,14 @@ class SignUpRepositoryImpl implements SignUpRepository {
   @override
   Future<SignUpResponse> register(SignUpData data) async {
     try {
+      print(data.name);
+      print(data.lastname);
+      print(data.email);
       final userCredential = await _auth.createUserWithEmailAndPassword(
           email: data.email, password: data.password);
       await userCredential.user!
           .updateDisplayName("${data.name} ${data.lastname}");
+
       return SignUpResponse(null, userCredential.user!);
     } on FirebaseAuthException catch (e) {
       return SignUpResponse(parseStringToSignUpError(e.code), null);

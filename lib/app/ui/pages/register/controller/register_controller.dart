@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_meedu/flutter_meedu.dart';
+import 'package:flutter_meedu/meedu.dart';
 import 'package:profile_test_app/app/domain/inputs/sign_up.dart';
 
 import 'package:profile_test_app/app/domain/repositories/sign_up_repository.dart';
@@ -13,9 +13,10 @@ class RegisterController extends StateNotifier<RegisterState> {
   RegisterController(this._sessionController)
       : super(RegisterState.initialState);
   final GlobalKey<FormState> formKey = GlobalKey();
-  final _signUpRepository = Get.i.find<SignUpRepository>();
+  final _signUpRepository = Get.find<SignUpRepository>();
 
   Future<SignUpResponse> submit() async {
+    print("im here now");
     final response = await _signUpRepository.register(
       SignUpData(
         name: state.name,

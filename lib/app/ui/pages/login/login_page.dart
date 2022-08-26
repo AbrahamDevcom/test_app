@@ -3,7 +3,7 @@ import 'package:profile_test_app/app/ui/global_widgets/custom_input_field.dart';
 import 'package:profile_test_app/app/ui/pages/login/utils/send_login_form.dart';
 
 import 'package:profile_test_app/app/ui/routes/routes.dart';
-import 'package:flutter_meedu/router.dart' as router;
+import 'package:flutter_meedu/ui.dart';
 import 'package:profile_test_app/app/utils/email_validator.dart';
 import '../../utils/helpers.dart';
 import 'controller/login_provider.dart';
@@ -71,7 +71,8 @@ class LoginPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             TextButton(
-                onPressed: () => sendLoginForm(context), child: Text('Login')),
+                onPressed: () => sendLoginForm(context),
+                child: const Text('Login')),
             const SizedBox(
               height: 10,
             ),
@@ -79,7 +80,7 @@ class LoginPage extends StatelessWidget {
                 onPressed: () {
                   router.pushNamed(Routes.REGISTER);
                 },
-                child: Text('Registration')),
+                child: const Text('Registration')),
           ],
         ),
       ),
