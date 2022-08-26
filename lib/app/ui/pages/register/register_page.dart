@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_meedu/state.dart';
+import 'package:flutter_meedu/ui.dart';
 import 'package:profile_test_app/app/ui/global_controllers/session_controller.dart';
 import 'package:profile_test_app/app/ui/global_widgets/custom_input_field.dart';
 import '../../../utils/email_validator.dart';
@@ -80,8 +80,7 @@ class RegisterPage extends StatelessWidget {
                         onChanged: controller.onVPasswordChanged,
                         label: 'Verification Password',
                         validator: (text) {
-                          if (controller.state.vPassword !=
-                              controller.state.password) {
+                          if (text != controller.state.password) {
                             return "password don't match";
                           }
                           if (text!.trim().length >= 6) {
@@ -92,7 +91,7 @@ class RegisterPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 30),
                       CupertinoButton(
-                        child: const Text("Regsiter"),
+                        child: const Text("Register"),
                         color: Colors.blue,
                         onPressed: () => sendRegister(context),
                       )

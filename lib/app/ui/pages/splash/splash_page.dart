@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_meedu/flutter_meedu.dart';
 import 'package:profile_test_app/app/ui/pages/splash/controller/splash_provider.dart';
 import 'controller/splash_controller.dart';
-import 'package:flutter_meedu/router.dart' as router;
+import 'package:flutter_meedu/ui.dart';
 
 final controller = splashProvider.read;
 

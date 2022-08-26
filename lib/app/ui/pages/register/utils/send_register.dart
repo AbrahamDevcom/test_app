@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:profile_test_app/app/domain/inputs/sign_up.dart';
 import 'package:profile_test_app/app/ui/global_widgets/dialogs/dialogs.dart';
 import 'package:profile_test_app/app/ui/global_widgets/dialogs/progress_dialogs.dart';
 import 'package:profile_test_app/app/ui/routes/routes.dart';
 import '../../../../domain/responses/sing_up_responses.dart';
 import '../register_page.dart' show registerProvider;
-import 'package:flutter_meedu/router.dart' as router;
+import 'package:flutter_meedu/ui.dart';
 
 Future<void> sendRegister(BuildContext context) async {
   final controller = registerProvider.read;
   final isValidForm = controller.formKey.currentState!.validate();
-
+  print("im here");
   if (isValidForm) {
     ProgressDialog.show(context);
     final response = await controller.submit();

@@ -4,7 +4,7 @@ import 'package:profile_test_app/app/ui/global_widgets/dialogs/progress_dialogs.
 import 'package:profile_test_app/app/ui/routes/routes.dart';
 import '../../../../domain/responses/sign_in_responses.dart';
 import '../controller/login_provider.dart' show loginProvider;
-import 'package:flutter_meedu/router.dart' as router;
+import 'package:flutter_meedu/ui.dart';
 
 Future<void> sendLoginForm(BuildContext context) async {
   final controller = loginProvider.read;
